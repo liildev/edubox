@@ -19,7 +19,12 @@ const topVariant = {
   },
 };
 
-const fadeIn = (direction, type, delay, duration) => ({
+const fadeIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
     y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
@@ -38,7 +43,12 @@ const fadeIn = (direction, type, delay, duration) => ({
   },
 });
 
-const slideIn = (direction, type, delay, duration) => ({
+const slideIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
     y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
@@ -81,10 +91,4 @@ const textContainer = {
   }),
 };
 
-export {
-  fadeIn,
-  slideIn,
-  topVariant,
-  mainVariant,
-  textContainer,
-};
+export { fadeIn, slideIn, topVariant, mainVariant, textContainer };
