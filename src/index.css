@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth text-main;
+  }
+
+  section,
+  footer {
+    @apply py-8 ss:py-12 lg:py-14 xl:py-24;
+  }
+
+  button {
+    @apply max-w-[220px] transform transition duration-500 hover:scale-110;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full mx-auto max-w-[1400px] px-5;
+    @apply sm:px-[30px] md:px-[80px] lg:px-[120px] xl:px-[140px];
+  }
+
+  .flex-center {
+    @apply flex items-center;
+  }
+
+  .header-wrapper {
+    @apply flex flex-col;
+    @apply md:items-center md:flex-row md:justify-between;
+  }
+
+  .header-title {
+    @apply font-extrabold text-2xl pt-12 sm:pt-16;
+    @apply sx:text-2xl ss:text-4xl md:text-xl lg:text-2xl xl:text-4xl;
+  }
+
+  .header-desc {
+    @apply sm:w-2/3 md:w-full text-[10px] sx:text-sm md:text-[10px] lg:text-[12px] xl:text-base md:leading-4 lg:leading-5 xl:leading-6;
+  }
+
+  .header-content {
+    @apply md:hidden flex-center justify-center mt-5 pb-10  ss:pb-20 gap-x-5;
+  }
+
+  .adver-title {
+    @apply px-0 ss:px-5 text-sm ss:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white text-center font-medium;
+  }
+
+  .categories-block {
+    @apply px-0 md:px-10 lg:px-20 xl:px-40 mt-10 grid grid-cols-2 gap-4 md:gap-6;
+  }
+
+  .category-content {
+    @apply flex-center justify-between bg-main rounded-lg text-white p-3 ss:p-5 hover:bg-white hover:text-main hover:shadow-box transition ease-out duration-300 border border-main hover:border-[#D9D9D9];
+  }
+
+  .categories-desc {
+    @apply text-center text-[10px] sx:text-sm ss:text-lg sm:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  .subs-content {
+    @apply grid grid-cols-3 md:grid-cols-4 gap-y-14  sm:gap-y-20 mt-16 px-0 md:px-5 lg:px-10;
+  }
+
+  .footer-wrapper {
+    @apply flex flex-col md:flex-row items-start justify-between gap-y-8 ss:gap-y-14;
+  }
+
+  .footer-item {
+    @apply text-[12px] ss:text-sm xl:text-lg;
+  }
+
+  .navbar-sticky {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 7%);
+    background: white;
+    padding: 8px;
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transition: all 0.18s ease-in-out;
+    -ms-transition: all 0.18s ease-in-out;
+    -webkit-transition: all 0.18s ease-in-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
