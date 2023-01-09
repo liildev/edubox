@@ -3,6 +3,7 @@ import { banner, logo } from "../assets";
 import { slideIn, topVariant } from "../utils/motion";
 import { Container } from "../layout";
 import { MotionDesc, MotionDiv, Devider, Buttons } from "../components";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -10,13 +11,14 @@ export default function Hero() {
       <Container>
         <div className="header-wrapper">
           <div className="w-full md:w-[45%]">
-            <motion.a variants={topVariant} href="#home">
-              <img
+            <Link to={"/"}>
+              <motion.img
+                variants={topVariant}
                 src={logo}
-                className="w-[180px] sx:w-[230px] md:w-[200px] lg:w-[230px] xl:w-[270px]"
+                className="logo-wrapper"
                 alt="Logo"
               />
-            </motion.a>
+            </Link>
 
             <motion.h1 variants={topVariant} className="header-title">
               УЧЕБНЫЕ ЗАВЕДЕНИЯ В УЗБЕКИСТАНЕ

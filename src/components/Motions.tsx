@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { textContainer, mainVariant } from "../utils/motion";
+import { textContainer, mainVariant, topVariant } from "../utils/motion";
 import { IMotionEl, IMotionHeading } from "../types";
 
 const MotionHeading = ({ title, textStyles }: IMotionHeading) => {
@@ -14,7 +14,7 @@ const MotionHeading = ({ title, textStyles }: IMotionHeading) => {
   );
 };
 
-const MotionTitle = ({ children, ...props }:IMotionEl) => {
+const MotionTitle = ({ children, ...props }: IMotionEl) => {
   return (
     <motion.h2 variants={mainVariant} {...props}>
       {children}

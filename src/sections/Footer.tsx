@@ -1,6 +1,7 @@
 import { MotionDiv } from "../components";
 import { footerLogo } from "../assets";
 import { Container } from "../layout";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,13 +9,13 @@ export default function Footer() {
       <Container>
         <MotionDiv className="footer-wrapper">
           <div>
-            <a href="#home">
+            <Link to="/">
               <img
                 src={footerLogo}
                 className="w-[200px] ss:w-[250px] md:w-[200px] lg:w-[300px]"
                 alt="Logo"
               />
-            </a>
+            </Link>
             <p className="mt-5 text-sm xl:text-lg">
               Каталог учебных заведеный в Узбекистане
             </p>
@@ -33,7 +34,9 @@ export default function Footer() {
             </li>
 
             <li className="footer-item">
-              Пользовательское соглашение и <br /> политика конфиденциальности
+              <Link to={"/policy"} className="hover:underline">
+                Пользовательское соглашение и <br /> политика конфиденциальности
+              </Link>
             </li>
           </ul>
 

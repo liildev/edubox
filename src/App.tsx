@@ -1,22 +1,15 @@
-import {
-  Subs,
-  Navbar,
-  Header,
-  Banner,
-  Footer,
-  Categories,
-  Advertisement,
-} from "./sections";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Policy from "./pages/Policy";
+import { Footer } from "./sections";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Header />
-      <Advertisement />
-      <Categories />
-      <Subs />
-      <Banner />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/policy" element={<Policy />} />
+      </Routes>
       <Footer />
     </>
   );
