@@ -15,7 +15,7 @@ export default function Policy() {
           <img src={logo} className="logo-wrapper" alt="Logo" />
         </Link>
 
-        <div className="mt-10 md:mt-20 text-black space-y-5 md:space-y-7 text-[10px] sm:text-sm md:text-base">
+        <div className="mt-10 md:mt-20 text-black space-y-5 md:space-y-7 text-sm md:text-base">
           <h1 className="font-bold text-sm md:text-base">
             Политика конфиденциальности мобильного приложений «EducationBOX»
           </h1>
