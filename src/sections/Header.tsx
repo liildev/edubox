@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { banner, logo } from "../assets";
-import { slideIn, topVariant } from "../utils/motion";
+import { banner } from "../assets";
 import { Container } from "../layout";
-import { MotionDesc, MotionDiv, Devider, Buttons } from "../components";
-import { Link } from "react-router-dom";
+import { slideIn, topVariant } from "../utils/motion";
+import { MotionDesc, MotionDiv, Devider, Buttons, Logo } from "../components";
 
 export default function Hero() {
   return (
@@ -11,14 +10,7 @@ export default function Hero() {
       <Container>
         <div className="header-wrapper">
           <div className="w-full md:w-[45%]">
-            <Link to={"/"}>
-              <motion.img
-                variants={topVariant}
-                src={logo}
-                className="logo-wrapper"
-                alt="Logo"
-              />
-            </Link>
+            <Logo />
 
             <motion.h1 variants={topVariant} className="header-title">
               УЧЕБНЫЕ ЗАВЕДЕНИЯ В УЗБЕКИСТАНЕ
