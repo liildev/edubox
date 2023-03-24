@@ -13,7 +13,13 @@ export default function Buttons() {
         </a>
       </button>
       <button>
-        <img src={apple} alt="Apple" />
+        <a
+          href="https://apps.apple.com/us/app/education-box/id6446034429"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={apple} alt="Apple" />
+        </a>
       </button>
     </>
   );

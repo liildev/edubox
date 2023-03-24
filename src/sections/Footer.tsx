@@ -25,7 +25,12 @@ export default function Footer() {
 
           <ul className="space-y-5 ss:space-y-2">
             <li className="footer-item">
-              <a href="#sdfsd" className="hover:underline">
+              <a
+                href="https://apps.apple.com/us/app/education-box/id6446034429"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
                 App Store
               </a>
             </li>
